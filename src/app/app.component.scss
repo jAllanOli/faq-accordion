@@ -1,0 +1,35 @@
+@import "../styles/index.scss";
+
+.wallpaper-wraper {
+  min-height: 100vh;
+  background: url(../assets/images/background-pattern-mobile.svg) no-repeat,
+    $light-pink;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8.91rem 1.5rem 0;
+}
+
+.faq-container {
+  background-color: $white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    & img {
+      width: 24px;
+    }
+
+    & h1 {
+      @include heading-lg;
+      color: $dark-purple;
+    }
+  }
+}

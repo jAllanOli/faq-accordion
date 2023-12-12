@@ -1,11 +1,16 @@
-<main>
-  <h1>FAQs</h1>
-  <div *ngIf="accordionItems">
-    <article *ngFor="let item of accordionItems">
-      <app-accordion-item
-        [caption]="item.caption"
-        [description]="item.description"
-      ></app-accordion-item>
-    </article>
-  </div>
-</main>
+<div class="wallpaper-wraper">
+  <main class="faq-container">
+    <header class="faq-container__header">
+      <img src="../assets/images/icon-star.svg" alt="star" />
+      <h1>FAQs</h1>
+    </header>
+    <div *ngIf="accordionItems">
+      <article *ngFor="let item of accordionItems">
+        <app-accordion-item
+          [caption]="item.caption"
+          [description]="item.description"
+        ></app-accordion-item>
+      </article>
+    </div>
+  </main>
+</div>
