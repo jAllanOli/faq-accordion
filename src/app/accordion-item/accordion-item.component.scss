@@ -1,0 +1,41 @@
+@import "../../styles/index.scss";
+
+.accordion {
+  padding: 20px 0;
+
+  &__caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    color: $dark-purple;
+    transition: all 300ms ease-in-out;
+
+    h2 {
+      @include heading-sm;
+
+      @media (min-width: 720px) {
+        @include heading-md;
+      }
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: $pink;
+    }
+  }
+
+  &__description {
+    @include body-sm;
+    color: $pale-purple;
+
+    @media (min-width: 720px) {
+      @include body-md;
+    }
+  }
+}

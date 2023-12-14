@@ -9,14 +9,28 @@
   justify-content: center;
   align-items: flex-start;
   padding: 8.91rem 1.5rem 0;
+
+  @media (min-width: 720px) {
+    background: url(../assets/images/background-pattern-desktop.svg) no-repeat,
+      $light-pink;
+    padding: 0;
+    align-items: center;
+  }
 }
 
 .faq-container {
   background-color: $white;
   padding: 1.5rem;
+  max-width: 37.5rem;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+
+  @media (min-width: 720px) {
+    gap: 2rem;
+    padding: 2.5rem;
+  }
 
   &__header {
     display: flex;
@@ -25,11 +39,23 @@
 
     & img {
       width: 24px;
+
+      @media (min-width: 720px) {
+        width: 40px;
+      }
     }
 
     & h1 {
       @include heading-lg;
       color: $dark-purple;
+
+      @media (min-width: 720px) {
+        @include heading-xl;
+      }
     }
   }
+}
+
+.accordion-item:not(:last-child) {
+  border-bottom: 1px solid $light-pink;
 }
